@@ -1,0 +1,10 @@
+faq/html/node_modules/
+faq/html/dist/
+faq/src/
+
+qa/html/node_modules/
+qa/html/dist/
+qa/src/
+qa/production/
+
+*.zip
