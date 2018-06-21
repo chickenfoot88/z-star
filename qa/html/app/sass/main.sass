@@ -1,0 +1,171 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.qa
+	padding-top: 100px
+	line-height: 1.3
+	font-size: em(14px)
+	height: 3000px
+	color: $main-color
+	.actual, .pagination, .more-answers
+		padding-bottom: 28px
+		border-bottom: 1px solid $main-color
+		margin-bottom: 38px
+	.more-answers
+		display: none
+	h2
+		background: url(../img/h2_bg.png) center center no-repeat
+		font-size: em(24px)
+		font-weight: normal
+		padding: 20px 0
+		text-align: center
+		text-transform: uppercase
+		color: $text-alternative-color
+	.question, .answer-text
+		position: relative
+		margin-bottom: 30px
+	.question
+		padding-left: 50px
+		p
+			margin-bottom: 3px
+	.question::before, .answer-text::before
+		content: ""
+		width: 35px
+		height: 35px
+		position: absolute
+		left: 8px
+		top: 5px
+		background: url(../img/question_icon.png) no-repeat
+	.answer-text
+		&::before
+			left: -43px
+			background: url(../img/answer_icon.png) no-repeat
+	p
+		font-weight: bold
+		font-size: em(16px)
+		color: $text-alternative-color
+		span
+			font-weight: normal
+			color: $text-main-color
+	.pagination
+		ul
+			list-style-type: none
+			text-align: right
+			margin: 0
+			padding: 0
+			li
+				display: inline-block
+				padding: 0 5px
+				a
+					color: $text-main-color
+					line-height: 1
+				&.active
+					a
+						color: $text-alternative-color
+						text-decoration: underline
+						font-weight: bold
+				&:hover
+					a
+						color: $text-alternative-color
+			.prev, .next
+				a
+					display: block
+					background-image: url(../img/play_btn.png)
+					background-position: center center
+					background-size: cover
+					width: 9px
+					height: 12px
+					margin-left: 18px
+			.prev
+				a
+					transform: rotate(180deg)
+					margin-left:
+					margin-right: 18px
+
+	.show-answers, .close-answers
+		display: block
+		text-align: center
+		text-decoration: underline
+		color: $text-alternative-color
+		font-size: em(18px)
+		background: url(../img/play_btn.png) left  center no-repeat
+		height: 35px
+		width: 310px
+		margin: 0 auto
+		padding-top: 7px
+		cursor: pointer
+
+ .close-answers
+		background: url(../img/play_btn_up.png) left  center no-repeat
+		width: 240px
+
+	.social-interaction
+		float: right
+		color: $text-accent-color
+		font-weight: bold
+		padding-top: 10px
+		.like-button, .answer-button
+			display: block
+			background: url(../img/like.png) no-repeat
+			width: 25px
+			height: 25px
+			margin-top: -6px
+			margin-left: 10px
+			float: right
+		.answer-button
+			background: url(../img/arrow_right.png) no-repeat
+			margin-left: 37px
+			float: none
+			padding: 0
+			margin-top: 8px
+		&.active
+			.like-button
+				background: url(../img/like_hover.png) no-repeat
+			color: #45569b
+		.like-button
+			&:hover
+				background: url(../img/like_hover.png) no-repeat
+
+
+@import "media" // Всегда в конце
